@@ -2,5 +2,11 @@
 p {font-family:sans-serif;margin:.1em;}
 .wrap {margin:auto;display:flex;justify-content: center;max-width:1000px;}
 .album {margin: 10px;}
+.player {width:50%;}
 /* Homepage Stylings */
 .album_art {width:200px;}
+.album_name {color:fuchsia;font-size:30px;font-weight:bold;}
+/* Album Page Stylings */
+.single_album {display:flex;justify-content: start;flex-wrap:wrap;width:100%;margin: 10px auto;}
+.album_art_single {width: 400px;}
+.album_info {margin-left:10px;}

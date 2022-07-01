@@ -9,3 +9,6 @@ class Album(models.Model):
 class Artist(models.Model):
     artist_name = models.CharField(max_length=255,null=False,blank=False)
     album = models.CharField(max_length=255, null=False,blank=False)
+
+class Tracks(models.Model):
+    track = models.CharField(max_length=255, null=False, blank=False)

@@ -1,4 +1,29 @@
-{% extends 'base.html' %} {% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    {% extends 'base.html' %} {% block content %}
+
+       <div class="single_album">
+            <img src= '/{{ album.album_art }}' class="album_art_single">
+            <div class="album_info">
+                <p class="album_name">{{album.name}}</p>
+                <p>By {{album.artist}}</p>
+                <p>Added {{album.created}}</p>
+            </div>
+            <div class="track_list"></div>
+        </div>
+
+
 
 
 {% endblock %}
+
+</body>
+</html>
