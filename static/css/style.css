@@ -1,5 +1,6 @@
 /* Global Stylings */
 p {font-family:sans-serif;margin:.1em;}
+#nav_bar {text-align:center;width:100%;}
 .wrap {margin:auto;display:flex;justify-content: center;max-width:1000px;}
 .album {margin: 10px;}
 .player {width:50%;}

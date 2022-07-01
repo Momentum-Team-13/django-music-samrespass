@@ -9,7 +9,7 @@
 </head>
 <body>
     {% extends 'base.html' %} {% block content %}
-
+    
         {% for album in albums %}
         <a href="{% url 'single_album' pk=album.pk %}"><div class="album">
             <img src= '/{{ album.album_art }}' class="album_art">
@@ -18,6 +18,7 @@
             <p>Added {{album.created}}</p>
         </div></a>
         {% endfor %}
+        
 
 
 

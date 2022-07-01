@@ -23,5 +23,7 @@ from djamming import views as site_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', site_page.front_page, name='front_page'),
-    path('albums/<int:pk>', site_page.single_album, name='single_album')
+    path('albums/<int:pk>', site_page.single_album, name='single_album'),
+    path('albums/new', site_page.new_album, name='new_album')
+    
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
