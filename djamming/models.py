@@ -12,3 +12,4 @@ class Artist(models.Model):
 
 class Tracks(models.Model):
     track = models.CharField(max_length=255, null=False, blank=False)
+    
