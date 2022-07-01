@@ -8,5 +8,5 @@ def front_page(request):
 
 def single_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
-    track = Track.objects.all()
+    track = Track.objects.filter(album = pk)
     return render(request, "djamming/view_album.html", {"tracks": track,"album": album})
