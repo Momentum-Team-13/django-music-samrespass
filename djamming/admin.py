@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.db import models
 from django.db.models import Model
-from .models import Artist, Album
+from .models import Artist, Album, Track
 
 
 # Register your models here.
@@ -9,3 +9,5 @@ from .models import Artist, Album
 admin.site.register(Artist)
 
 admin.site.register(Album)
+
+admin.site.register(Track)

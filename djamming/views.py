@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Album, Artist
+from .models import Album, Artist, Track
 
 
 def front_page(request):
@@ -8,4 +8,5 @@ def front_page(request):
 
 def single_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
-    return render(request, "djamming/view_album.html", {"album": album})
+    track = Track.objects.all()
+    return render(request, "djamming/view_album.html", {"tracks": track,"album": album})

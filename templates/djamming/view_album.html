@@ -16,8 +16,16 @@
                 <p class="album_name">{{album.name}}</p>
                 <p>By {{album.artist}}</p>
                 <p>Added {{album.created}}</p>
+                <div class="track_list">
+                <h2>Track List</h2>
+                    {% for track in tracks %}
+                    <p>
+                        {{track.song}}
+                </p>
+                {% endfor %}
             </div>
-            <div class="track_list"></div>
+            </div>
+  
         </div>
 
 
