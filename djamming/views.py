@@ -23,3 +23,27 @@ def new_album(request):
 
     return render(request, "djamming/add_album.html", {"form": form})
 
+def delete_album(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method == 'POST':
+        album.delete()
+        return redirect(to='front_page')
+
+    return render(request, "djamming/delete_album.html",
+                  {"album": album})
+
+
+def edit_album(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method == 'GET':
+        form = AlbumForm(instance=album)
+    else:
+        form = AlbumForm(data=request.POST, instance=album)
+        if form.is_valid():
+            form.save()
+            return redirect(to='front_page')
+
+    return render(request, "djamming/edit_album.html", {
+        "form": form,
+        "contact": album
+    })

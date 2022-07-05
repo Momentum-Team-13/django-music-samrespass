@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', site_page.front_page, name='front_page'),
     path('albums/<int:pk>', site_page.single_album, name='single_album'),
-    path('albums/new', site_page.new_album, name='new_album')
+    path('albums/new', site_page.new_album, name='new_album'),
+    path('albums/<int:pk>/delete', site_page.delete_album, name='delete_album'),
+    path('albums/<int:pk>/edit/', site_page.edit_album, name='edit_album'),
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
