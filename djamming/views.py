@@ -48,6 +48,22 @@ def edit_album(request, pk):
         "contact": album
     })
 
+def edit_tracks(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method == 'GET':
+        form = TrackForm(instance=album)
+    else:
+        form = TrackForm(data=request.POST, instance=album)
+        if form.is_valid():
+            form.save()
+            return redirect(to='front_page')
+
+    return render(request, "djamming/edit_track.html", {
+        "form": form,
+        "contact": album,
+        "pk": pk
+    })
+
 def new_track(request):
     if request.method == 'GET':
         form = TrackForm()

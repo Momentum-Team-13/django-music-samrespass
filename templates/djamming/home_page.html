@@ -11,7 +11,8 @@
     {% extends 'base.html' %} {% block content %}
     
         {% for album in albums %}
-        <a href="{% url 'single_album' pk=album.pk %}"><div class="album">
+        <a href="{% url 'single_album' pk=album.pk %}">
+            <div class="album" data-src="{{ album.music }}">
             <img src= '/{{ album.album_art }}' class="album_art">
             <p class="album_name">{{album.name}}</p>
             <p>By {{album.artist}}</p>
