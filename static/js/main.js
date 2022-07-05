@@ -11,6 +11,4 @@ songs.addEventListener("click", function playSong() {
 let albumQuery = (new URL(document.location)).searchParams
 let album = albumQuery.get('album')
 let dropDown = document.querySelector('#id_album')
-if (album in dropDown) {
-    console.log("i'm here")
-}
+dropDown.value = album
