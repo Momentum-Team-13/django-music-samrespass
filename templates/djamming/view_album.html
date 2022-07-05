@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>InterStellar Idol Database</title>
 </head>
 <body>
     {% extends 'base.html' %} {% block content %}
 
        <div class="single_album">
-            <figure><img src= '/{{ album.album_art }}' class="album_art_single">
+            <figure class="cover"><img src= '/{{ album.album_art }}' class="album_art_single">
             <figcaption><a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a>
             <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a></figcaption></figure>
             <div class="album_info">
@@ -22,7 +22,7 @@
                 <h2>Track List</h2>
                     {% for track in tracks %}
                     <div class="song" data-parent="/{{track.song}}">
-                        <p>{{track.name}}</p>
+                        <p class="track">{{track.name}}</p>
                         </div>
                 
                 {% endfor %}

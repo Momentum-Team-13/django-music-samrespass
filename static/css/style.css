@@ -1,14 +1,23 @@
 /* Global Stylings */
 p {font-family:sans-serif;margin:.1em;}
-#nav_bar {text-align:center;width:100%;}
-.wrap {margin:auto;display:flex;justify-content: center;max-width:1000px;}
-.album {margin: 10px;}
-.player {width:50%;}
+a {text-decoration:none;font-family: sans-serif;}
+a:hover {color:black;}
+h1 {font-family:'Press Start 2P', sans-serif;}
+h2 {font-family:'Press Start 2P', sans-serif;}
+#nav_bar {text-align:center;width:100%;font-family: 'Press Start 2P', sans-serif;margin: 10px auto}
+#player {width:80%;}
+.wrap {margin:auto;display:flex;justify-content: center;max-width:1500px;flex-wrap:wrap}
+.header {text-align: center;}
+.nav_link {font-family: 'Press Start 2P', sans-serif;}
 /* Homepage Stylings */
+.album {margin: 10px;max-width:200px;}
 .album_art {width:200px;}
-.album_name {color:fuchsia;font-size:30px;font-weight:bold;}
+.album_art:hover {opacity:50%;background-color:fuchsia;}
+.album_name {color:fuchsia;font-size:1.3em;font-family:'Press Start 2P', sans-serif;line-height:25px}
 /* Album Page Stylings */
-.single_album {display:flex;justify-content: start;flex-wrap:wrap;width:100%;margin: 10px auto;}
+.single_album {display:flex;justify-content: start;flex-wrap:wrap;margin: 10px auto;}
 .album_art_single {width: 400px;}
-.album_info {margin-left:10px;}
+.album_info {margin:0 auto;text-align: center;}
 .track_list {margin-top:10px;}
+.cover {margin-top: 0}
+.track:hover {color:fuchsia;cursor: pointer;}

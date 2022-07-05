@@ -6,16 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{% static '/js/main.js' %}" defer></script>
-    <title>Document</title>
+    <title>InterStellar Idol Database</title>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <div class="header"><h1>InterStellar Idol Database</h1></div>
     <div class="wrap"> 
         <audio controls autoplay id="player">
             <source src="" type="audio/mpeg">
         </audio>
     </div>
-    <div id="nav_bar"><div><a href="{% url 'front_page' %}">Home</a> | <a href="{% url 'new_album' %}">Add A New Album!</a> | <a href="{% url 'new_track' %}">Add A New Song!</a></div></div>
+    <div id="nav_bar"><div><a href="{% url 'front_page' %}" class="nav_link">Home</a> | <a href="{% url 'new_album' %}"  class="nav_link">Add A New Album</a> | <a href="{% url 'new_track' %}"  class="nav_link">Add A New Track</a></div></div>
     <div class="wrap">
         {% block content %} 
         {% endblock %}
