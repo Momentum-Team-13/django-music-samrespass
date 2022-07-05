@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div>
+    <h1>New Track!</h1>
+  <form action="{% url 'new_track' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+      <button type="submit">Add Track</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

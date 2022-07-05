@@ -11,11 +11,11 @@
 </head>
 <body>
     <div class="wrap"> 
-        <audio controls id="player">
+        <audio controls autoplay id="player">
             <source src="" type="audio/mpeg">
         </audio>
     </div>
-    <div id="nav_bar"><div><a href="{% url 'new_album' %}">Add A New Album!</a></div></div>
+    <div id="nav_bar"><div><a href="{% url 'new_album' %}">Add A New Album!</a></div><div><a href="{% url 'new_track' %}">Add A New Song!</a></div></div>
     <div class="wrap">
         {% block content %} 
         {% endblock %}

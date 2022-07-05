@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Album, Artist, Track
-from .forms import AlbumForm
+from .forms import AlbumForm, TrackForm
 
 
 def front_page(request):
@@ -47,3 +47,14 @@ def edit_album(request, pk):
         "form": form,
         "contact": album
     })
+
+def new_track(request):
+    if request.method == 'GET':
+        form = TrackForm()
+    else:
+        form = TrackForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect(to='front_page')
+
+    return render(request, "djamming/add_track.html", {"form": form})

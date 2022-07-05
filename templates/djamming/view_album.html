@@ -21,10 +21,12 @@
                 <div class="track_list">
                 <h2>Track List</h2>
                     {% for track in tracks %}
-                    <p>
-                        {{track.song}}
-                </p>
+                    <div class="song" data-parent="/{{track.song}}">
+                        <p>{{track.name}}</p>
+                        </div>
+                
                 {% endfor %}
+                <a href="">Add a Track</a>
             </div>
             
             </div>

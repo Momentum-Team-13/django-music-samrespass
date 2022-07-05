@@ -30,8 +30,8 @@ Your app should have the following URLs. You'll need to define view functions to
 <!-- | `/albums/new`             | GET  | show a form to create a new album                     | -->
 <!-- | `/albums/new`             | POST | create a new album                                    | -->
 <!-- | `/albums/<int:pk>`        | GET  | show details about a single album                     | -->
-| `/albums/<int:pk>/edit`   | GET  | show a form to edit a new album                       |
-| `/albums/<int:pk>/edit`   | POST | update a specific album                               |
+<!-- | `/albums/<int:pk>/edit`   | GET  | show a form to edit a new album                       |
+| `/albums/<int:pk>/edit`   | POST | update a specific album                               | -->
 <!-- | `/albums/<int:pk>/delete` | GET  | show a confirmation screen to delete a specific album |
 | `/albums/<int:pk>/delete` | POST | delete a specific album                               | -->
 
