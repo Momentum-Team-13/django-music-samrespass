@@ -1,3 +1,16 @@
-{% extends 'base.html' %} {% block content %}
+{% extends "base.html" %}
 
+{% block content %}
+
+
+<div>
+    <h1>New Artist!</h1>
+  <form action="{% url 'new_artist' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+      <button type="submit">Add Artist</button>
+    </div>
+  </form>
+</div>
 {% endblock %}

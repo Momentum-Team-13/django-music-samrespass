@@ -19,3 +19,12 @@ class TrackForm(forms.ModelForm):
             'album',
             
         ]
+
+class ArtistForm(forms.ModelForm):
+    class Meta:
+        model = Artist
+        fields = [
+            'name',
+            'profile_pic',
+            'bio'
+        ]

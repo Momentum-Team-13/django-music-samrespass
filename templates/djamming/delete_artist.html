@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Delete Artist?</h1>
+
+<div>
+  <form action="{% url 'delete_artist' pk=artist.pk %}" method="POST">
+    {% csrf_token %}
+    <p>Are you sure you want to delete {{ artist.name }} from the database?</p>
+    <div>
+      <button type="submit">Delete Artist</button><br />
+      <a href="{% url 'front_page' %}">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

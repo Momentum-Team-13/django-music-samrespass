@@ -1,4 +1,45 @@
-{% extends 'base.html' %} {% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterStellar Idol Database</title>
+</head>
+<body>
+    {% extends 'base.html' %} {% block content %}
+
+       <div class="single_artist">
+       
+            <figure class="profile"><img src= '/{{ artist.profile_pic }}' class="profile_pic">
+            <figcaption><a href="{% url 'edit_artist' pk=artist.pk %}">Edit Artist</a>
+            <a href="{% url 'delete_artist' pk=artist.pk %}">Delete Artist</a></figcaption></figure>
+            <div class="artist_info">
+                <p class="album_name">{{artist.name}}</p>
+                <p>{{artist.bio}}</p>
+                <div class="album_list">
+                <h2>Discography</h2>
+                    {% for album in albums %}
+                    <div class="albums">
+                        <a href="{% url 'single_album' pk=album.pk %}">
+                        <img class="artist_album" src="/{{ album.album_art }}">
+                        <p>{{ album.name }}</p>
+                        </a>
+                        </div>
+                
+                {% endfor %}
+                <a href="{% url 'new_album' %}?artist={{artist.pk}}">Add an Album</a>
+            </div>
+            
+            </div>
+  
+        </div>
 
 
-{% endblock %} 
+
+
+{% endblock %}
+
+</body>
+</html>

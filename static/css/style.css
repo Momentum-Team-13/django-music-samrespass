@@ -25,3 +25,7 @@ h2 {font-family:'Press Start 2P', sans-serif;color:white;}
 .track_list {margin-top:10px;}
 .cover {margin-top: 0}
 .track:hover {color:fuchsia;cursor: pointer;}
+/* Artist Page Stylings */
+.profile_pic {max-width:500px;}
+.single_artist {display:flex;}
+.artist_album {max-width:200px}
