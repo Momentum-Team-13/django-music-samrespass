@@ -8,7 +8,7 @@ class Track(models.Model):
     album = models.ForeignKey( "Album", on_delete=models.CASCADE, related_name="tracks", blank=False, null=False )
 
 class Album(models.Model):
-    artist = models.CharField(max_length=255, null=False, blank=False)
+    artist = models.CharField(max_length=255, null=True, blank=False)
     name = models.CharField(max_length=255, null=False, blank=False)
     def __str__(self):
         return(self.name)
@@ -17,8 +17,8 @@ class Album(models.Model):
 
 
 class Artist(models.Model):
-    name = models.CharField(max_length=255,null=False,blank=False)
-    album = models.ForeignKey( "Album", on_delete=models.CASCADE, related_name="album", blank=False, null=False )
+    name = models.CharField(max_length=255,null=True,blank=False)
+    album = models.ForeignKey( "Album", on_delete=models.CASCADE, related_name="album", blank=False, null=True )
     def __str__(self):
         return(self.name)
 
