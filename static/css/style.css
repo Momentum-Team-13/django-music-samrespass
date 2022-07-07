@@ -1,10 +1,12 @@
 /* Global Stylings */
-p {font-family:sans-serif;margin:.1em;}
-a {text-decoration:none;font-family: sans-serif;}
-a:hover {color:black;}
-h1 {font-family:'Press Start 2P', sans-serif;}
-h2 {font-family:'Press Start 2P', sans-serif;}
-#nav_bar {text-align:center;width:100%;font-family: 'Press Start 2P', sans-serif;margin: 10px auto}
+p {font-family:sans-serif;margin:.1em;color:white;}
+a {text-decoration:none;font-family: sans-serif;color:fuchsia}
+body {background-image: url('/static/images/space-background.png');}
+label {color:white;}
+a:hover {color:white;}
+h1 {font-family:'Press Start 2P', sans-serif;color:white;}
+h2 {font-family:'Press Start 2P', sans-serif;color:white;}
+#nav_bar {color:fuchsia;text-align:center;width:100%;font-family: 'Press Start 2P', sans-serif;margin: 10px auto}
 #player {width:80%;}
 .wrap {margin:auto;display:flex;justify-content: center;max-width:1500px;flex-wrap:wrap}
 .header {text-align: center;}
@@ -12,8 +14,10 @@ h2 {font-family:'Press Start 2P', sans-serif;}
 /* Homepage Stylings */
 .album {margin: 10px;max-width:200px;}
 .album_art {width:200px;}
-.album_art:hover {opacity:50%;background-color:fuchsia;}
+.album_art:hover {opacity:50%}
 .album_name {color:fuchsia;font-size:1.3em;font-family:'Press Start 2P', sans-serif;line-height:25px}
+.album_text {color:fuchsia}
+.album_link:hover {color:white;}
 /* Album Page Stylings */
 .single_album {display:flex;justify-content: start;flex-wrap:wrap;margin: 10px auto;}
 .album_art_single {width: 400px;}

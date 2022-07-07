@@ -11,13 +11,13 @@
     {% extends 'base.html' %} {% block content %}
     
         {% for album in albums %}
-        <a href="{% url 'single_album' pk=album.pk %}">
+        <a href="{% url 'single_album' pk=album.pk %}" class="album_link">
             <div class="album" data-src="{{ album.music }}">
             <img src= '/{{ album.album_art }}' class="album_art">
-            <p class="album_name">{{album.name}}</p>
-            <p>By {{album.artist}}</p>
-            <p>Added {{album.created}}</p>
-        </div></a>
+            <p class="album_name">{{album.name}}</p></a>
+            <a href="{% url 'artist' pk=album.pk %}" class="artist_link"><p class="album_text">By {{album.artist}}</p></a>
+            <p class="album_text">Added {{album.created}}</p>
+        </div>
         {% endfor %}
         
 

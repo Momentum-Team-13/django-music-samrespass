@@ -12,6 +12,11 @@ def single_album(request, pk):
     track = Track.objects.filter(album = pk)
     return render(request, "djamming/view_album.html", {"tracks": track,"album": album})
 
+def artist(request, pk):
+    album = Album.objects.all()
+    artist = get_object_or_404(Artist, pk=pk)
+    return render(request, "djamming/artist.html", {"artist": artist,"album": album})
+
 def new_album(request):
     if request.method == 'GET':
         form = AlbumForm()

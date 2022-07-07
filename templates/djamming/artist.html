@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterStellar Idol Database</title>
+</head>
+<body>
+    {% extends 'base.html' %} {% block content %}
+
+       <div class="single_album">
+            <figure class="cover"><img src= '/{{ album.album_art }}' class="album_art_single">
+            </figure>
+            <div class="album_info">
+                <p class="album_name">{{artist.name}}</p>
+                <div class="track_list">
+                <h2>Albums</h2>
+                    {% for albums in album %}
+                    <div class="song">
+                        <p class="track">{{album.name}}</p>
+                        </div>
+                
+                {% endfor %}
+            </div>
+            
+            </div>
+  
+        </div>
+
+
+
+
+{% endblock %}
+
+</body>
+</html>

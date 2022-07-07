@@ -17,8 +17,10 @@ class Album(models.Model):
 
 
 class Artist(models.Model):
-    artist_name = models.CharField(max_length=255,null=False,blank=False)
-    album = models.CharField(max_length=255, null=False,blank=False)
+    name = models.CharField(max_length=255,null=False,blank=False)
+    album = models.ForeignKey( "Album", on_delete=models.CASCADE, related_name="album", blank=False, null=False )
+    def __str__(self):
+        return(self.name)
 
 
     
